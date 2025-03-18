@@ -4246,6 +4246,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editName = true;
                                                                                       safeSetState(() {});
                                                                                       safeSetState(() {
@@ -4403,6 +4405,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editAdd1 = true;
                                                                                       safeSetState(() {});
                                                                                       safeSetState(() {
@@ -4589,6 +4593,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editAdd2 = true;
                                                                                       safeSetState(() {});
                                                                                       safeSetState(() {
@@ -4775,6 +4781,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editAdd3 = true;
                                                                                       safeSetState(() {});
                                                                                       safeSetState(() {
@@ -4960,6 +4968,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editAdd4 = true;
                                                                                       safeSetState(() {});
                                                                                       safeSetState(() {
@@ -5110,6 +5120,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editPhone = true;
                                                                                       safeSetState(() {});
                                                                                       safeSetState(() {
@@ -5666,6 +5678,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                       hoverColor: Colors.transparent,
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
+                                                                                        await _model.fixEditBoxes(context);
+                                                                                        safeSetState(() {});
                                                                                         _model.editMaster = true;
                                                                                         safeSetState(() {});
                                                                                       },
@@ -5765,6 +5779,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                       hoverColor: Colors.transparent,
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
+                                                                                        await _model.fixEditBoxes(context);
+                                                                                        safeSetState(() {});
                                                                                         _model.editSuspend = true;
                                                                                         safeSetState(() {});
                                                                                       },
@@ -5868,6 +5884,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editKill = true;
                                                                                       safeSetState(() {});
                                                                                     },
@@ -5971,6 +5989,8 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                                     hoverColor: Colors.transparent,
                                                                                     highlightColor: Colors.transparent,
                                                                                     onTap: () async {
+                                                                                      await _model.fixEditBoxes(context);
+                                                                                      safeSetState(() {});
                                                                                       _model.editProtected = true;
                                                                                       safeSetState(() {});
                                                                                     },

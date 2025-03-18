@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/instant_timer.dart';
+import 'dart:async';
 import '/index.dart';
 import 'main_console_widget.dart' show MainConsoleWidget;
 import 'package:flutter/material.dart';
@@ -120,5 +121,48 @@ class MainConsoleModel extends FlutterFlowModel<MainConsoleWidget> {
 
     phoneFieldFocusNode?.dispose();
     phoneFieldTextController?.dispose();
+  }
+
+  /// Action blocks.
+  Future fixEditBoxes(BuildContext context) async {
+    if (editName) {
+      editName = false;
+    } else {
+      if (editAdd1) {
+        editAdd1 = false;
+      } else {
+        if (editAdd2) {
+          editAdd2 = false;
+        } else {
+          if (editAdd3) {
+            editAdd3 = false;
+          } else {
+            if (editAdd4) {
+              editAdd4 = false;
+            } else {
+              if (editPhone) {
+                editPhone = false;
+              } else {
+                if (editMaster) {
+                  editMaster = false;
+                } else {
+                  if (editKill) {
+                    editKill = false;
+                  } else {
+                    if (editSuspend) {
+                      editSuspend = false;
+                    } else {
+                      if (editProtected) {
+                        editProtected = false;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
