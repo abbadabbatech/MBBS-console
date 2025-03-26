@@ -78,6 +78,7 @@ class _WebSocketConnState extends State<WebSocketConn> {
   }
 
   closeConnect() {
+    FFAppState().connected = false;
     _channel.sink.close(status.normalClosure);
   }
 
@@ -130,11 +131,16 @@ class _WebSocketConnState extends State<WebSocketConn> {
       setState(() {});
       //FFAppState().connected = true;
     } on WebSocketChannelException catch (e) {
+      closeConnect();
       print('CHANNEL EXCEPTION: ' + e.message!);
     }
 
     processMessage(String s, String st) {
       if (st == 'AUTHREQ') {
+        myMessage = 'Received Auth Request';
+        FFAppState().wsMessage = myMessage;
+        FFAppState().addToSocketMessageLog(myMessage);
+        //FFAppState().addToSocketMessageLog('GOT AUTH REQ');
         if (!FFAppState().connected) {
           _channel.sink.add('[AUTHINFO][$myuser][$mypass]');
         }
@@ -239,7 +245,9 @@ class _WebSocketConnState extends State<WebSocketConn> {
     }, onError: (e) {
       print('WEBSOCKET ERROR:  $e');
       closeConnect();
-      doStreamRestart();
+      if (!FFAppState().connected) {
+        doStreamRestart();
+      }
     }, onDone: () {
       print('WEBSOCKET CLOSED');
       FFAppState().connected = false;
@@ -247,7 +255,9 @@ class _WebSocketConnState extends State<WebSocketConn> {
       FFAppState().wsMessage = myMessage;
       closeConnect();
       setState(() {});
-      doStreamRestart();
+      if (!FFAppState().connected) {
+        doStreamRestart();
+      }
     });
   }
 
