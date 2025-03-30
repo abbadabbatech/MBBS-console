@@ -1,4 +1,3 @@
-import '';
 import '/backend/schema/structs/index.dart';
 import '/components/kill_screen_modal/kill_screen_modal_widget.dart';
 import '/components/socket_log_comp/socket_log_comp_widget.dart';
@@ -1021,10 +1020,11 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                 child: Builder(
                                                                   builder:
                                                                       (context) {
-                                                                    final auditTrailLogs =
-                                                                        FFAppState()
+                                                                    final auditTrailLogs = functions
+                                                                        .sortAuditList(FFAppState()
                                                                             .auditLogList
-                                                                            .toList();
+                                                                            .toList())
+                                                                        .toList();
 
                                                                     return ListView
                                                                         .builder(
@@ -2241,10 +2241,11 @@ class _MainConsoleWidgetState extends State<MainConsoleWidget> {
                                                                 child: Builder(
                                                                   builder:
                                                                       (context) {
-                                                                    final auditTrailLogs =
-                                                                        FFAppState()
+                                                                    final auditTrailLogs = functions
+                                                                        .sortAuditList(FFAppState()
                                                                             .auditLogList
-                                                                            .toList();
+                                                                            .toList())
+                                                                        .toList();
 
                                                                     return ListView
                                                                         .builder(
