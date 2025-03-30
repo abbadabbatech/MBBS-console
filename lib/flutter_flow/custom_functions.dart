@@ -440,3 +440,10 @@ UserRecordStruct parseAccDet(String accDetString) {
 int convertToInt(String timeRestart) {
   return int.parse(timeRestart);
 }
+
+List<AuditStruct> sortAuditList(List<AuditStruct> currentList) {
+  currentList.sort((a, b) => a.datetime!.compareTo(b.datetime!));
+
+  // Return the sorted list
+  return currentList;
+}
