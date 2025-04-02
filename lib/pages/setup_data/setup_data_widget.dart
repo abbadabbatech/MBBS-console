@@ -33,12 +33,6 @@ class _SetupDataWidgetState extends State<SetupDataWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       FFAppState().channelLogList = [];
-      FFAppState().addToAuditLogList(AuditStruct(
-        datetime: getCurrentTimestamp,
-        data: 'Audit Log Started',
-        channel: 'Chan 00',
-        user: 'Sysop',
-      ));
       safeSetState(() {});
       FFAppState().channelLogList =
           functions.initialChannelList().toList().cast<ChannelStruct>();

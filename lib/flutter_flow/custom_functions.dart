@@ -170,6 +170,8 @@ String? returnCharacter(int? charCode) {
     newCode = 402;
   } else if (charCode == 24) {
     newCode = 8593;
+  } else if (charCode == 240) {
+    newCode = 45;
   } else {
     newCode = charCode!;
   }
